@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name" translatable="false">DoorControl</string>
+    <string name="settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+
+
+    <string name="state_of_door">State of door</string>
+
+    <!-- Preference Titles -->
+
+    <!-- Messages Preferences -->
+
+    <!-- Sync Preferences -->
+    <string name="url">URL</string>
+    <string name="url_summary">Base URL to webservice with port</string>
+    <string name="access_header">Access</string>
+    <string name="token">Token</string>
+    <string name="token_summary">Token to access whe webservice</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="token">Token</string>
+    <string name="token_summary">Zugangstoken zum Webservice</string>
+    <string name="access_header">Zugangsdaten</string>
+    <string name="url_summary">Basis-URL des Webservices inkl. Port</string>
+    <string name="url">URL</string>
+    <string name="settings">Einstellungen</string>
+    <string name="state_of_door">Türstatus</string>
+</resources>
