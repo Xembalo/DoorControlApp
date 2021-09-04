@@ -1,4 +1,4 @@
-package de.xembalo.doorcontrol
+package de.famwienecke.doorcontrol
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,10 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import de.xembalo.doorcontrol.Constants
+import de.xembalo.doorcontrol.R
+import de.xembalo.doorcontrol.SettingsActivity
+import de.xembalo.doorcontrol.WSUtils
 
 import kotlinx.coroutines.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,7 +24,12 @@ class MainActivity : AppCompatActivity() {
 
         up.setOnClickListener { view ->
             GlobalScope.launch {
-                val resp = WSUtils.callWS(Constants.GARAGE, Constants.UP, this@MainActivity, Constants.PATH_MOVE)
+                val resp = WSUtils.callWS(
+                    Constants.GARAGE,
+                    Constants.UP,
+                    this@MainActivity,
+                    Constants.PATH_MOVE
+                )
                 if (!(resp.isNullOrEmpty())) {
                     Snackbar.make(view, resp, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show()
@@ -50,7 +59,12 @@ class MainActivity : AppCompatActivity() {
 
         down.setOnClickListener { view ->
             GlobalScope.launch {
-                val resp = WSUtils.callWS(Constants.GARAGE, Constants.DOWN, this@MainActivity, Constants.PATH_MOVE)
+                val resp = WSUtils.callWS(
+                    Constants.GARAGE,
+                    Constants.DOWN,
+                    this@MainActivity,
+                    Constants.PATH_MOVE
+                )
                 if (!(resp.isNullOrEmpty())) {
                     Snackbar.make(view, resp, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show()
@@ -80,7 +94,12 @@ class MainActivity : AppCompatActivity() {
 
         impulse.setOnClickListener { view ->
             GlobalScope.launch {
-                val resp = WSUtils.callWS(Constants.GARAGE, Constants.IMPULSE, this@MainActivity, Constants.PATH_MOVE)
+                val resp = WSUtils.callWS(
+                    Constants.GARAGE,
+                    Constants.IMPULSE,
+                    this@MainActivity,
+                    Constants.PATH_MOVE
+                )
                 if (!(resp.isNullOrEmpty()))
                     Snackbar.make(view, resp, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show()
@@ -92,7 +111,12 @@ class MainActivity : AppCompatActivity() {
 
 
             GlobalScope.launch {
-                val resp = WSUtils.callWS(Constants.GARAGE, Constants.CLIMATE, this@MainActivity, Constants.PATH_MOVE)
+                val resp = WSUtils.callWS(
+                    Constants.GARAGE,
+                    Constants.CLIMATE,
+                    this@MainActivity,
+                    Constants.PATH_MOVE
+                )
                 if (!(resp.isNullOrEmpty()))
                     Snackbar.make(view, resp, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show()
